@@ -1,21 +1,27 @@
 <template>
  <div class="page-wrapper">
      <TheHeader />
-     <NuxtPage />
+     <NuxtLoadingIndicator />
+        <NuxtPage />
+     <TheFooter />
 </div>
+
 </template>
 <script setup lang="ts">
 import TheHeader from "~~/components/theme4/common/TheHeader.vue";
+import TheFooter from "~~/components/theme4/common/TheFooter.vue";
 
  useHead({
       titleTemplate: 'Israel Market Place',
  })
 
- onMounted(() => {
-    document.querySelector( 'body' ).classList.add( 'loaded' );
- })
+
 </script>
-<style lang="postcss">
+<style lang="scss">
+$primary-color: #5a228b;
+
 @import '~/assets/css/bootstrap.min.css';
-@import '~/assets/css/demo/demo4/demo4.css';
+@import '~/assets/sass/style.scss';
+
+
 </style>

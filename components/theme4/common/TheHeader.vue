@@ -17,7 +17,7 @@
                                  <li><a href="about.html">About Us</a></li>
                                  <li><a href="wishlist.html">My Wishlist</a></li>
                                  <li><a href="cart.html">Cart</a></li>
-                                 <li><a href="login.html" class="login-link">Log In</a></li>
+                                 <li><a href="/auth/login" class="login-link">Log In</a></li>
                              </ul>
                          </div>
                          <!-- End .header-menu -->
@@ -72,9 +72,9 @@
                      <button class="mobile-menu-toggler text-primary mr-2" type="button">
                          <i class="fas fa-bars"></i>
                      </button>
-                     <a href="#" class="logo">
-                         <img src="images/logo.png" width="131" height="64" alt="israel market place logo">
-                     </a>
+                     <NuxtLink to="/" class="logo">
+                         <img src="~/public/images/logo.png" width="131" height="64" alt="israel market place logo">
+                     </NuxtLink>
                  </div>
                  <!-- End .header-left -->
 
@@ -228,6 +228,62 @@
              <!-- End .container -->
          </div>
          <!-- End .header-middle -->
+
+         <!--Header Bottom  -->
+         <div class="header-bottom sticky-header d-none d-lg-block" data-sticky-options="{'mobile': false}">
+           
+            <!-- Container -->
+            <div class="container">
+                <nav class="main-nav w-100">
+                    <ul class="menu">
+                        <li  :class="isHomeActive()" >
+                            <a href="/">Home</a>
+                        </li>
+                        <li :class="isShopActive()">
+                            <a href="/shop">Shop</a>
+                        </li>
+                        <li :class="isContactActive()">
+                                <a href="/contactus">Contact Us</a>
+                        </li>
+                        <li class="float-right"><a href="https://1.envato.market/DdLk5" rel="noopener" class="pl-5" target="_blank">Promotion Offer!</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- End Container -->
+
+         </div>
+         <!-- End Header-bottom -->
+
      </header>
      <!-- End .header --> 
 </template>
+<script setup lang="ts">
+
+const route = useRoute()
+console.log('current name', route.path)
+
+const isHomeActive = () => {
+    if (  route.path === "/") {
+        return 'active';
+      } else {
+        return false;
+      }
+}
+
+const isShopActive = () => {
+    if (route.path=="/shop") {
+        return 'active';
+      } else {
+        return false;
+      }
+}
+
+const isContactActive = () => {
+    if (route.path=="/contactus") {
+        return 'active';
+      } else {
+        return false;
+      }
+}
+
+</script>

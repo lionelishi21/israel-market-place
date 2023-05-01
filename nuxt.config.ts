@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     runtimeConfig: {
         mongoUrl: process.env.MONGO_URL,
     },
+    
   
      // more  
      css: [
@@ -15,5 +16,10 @@ export default defineNuxtConfig({
     nitro: {
       plugins: ["~/server/index.ts"],
     },
+
+    
+    modules: [
+        '@pinia/nuxt',
+    ],
 
 })

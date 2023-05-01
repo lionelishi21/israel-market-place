@@ -6,13 +6,13 @@
 @import 'mixins/breakpoints';
 @import 'mixins/lazy';
 @import 'mixins/buttons';
-
 // Config
 @import 'config/fonts';
 @import 'config/variables';
 @import 'config/helpers';
 @import 'config/spacing';
 @import 'demo/demo4/demo-variables';
+@import 'demo/demo4/demo4.scss';
 
 // Plugins CSS
 @import 'plugins/owl-carousel/owl.carousel';
@@ -37,8 +37,8 @@
 @import 'components/info-boxes';
 @import 'components/overlay';
 @import 'components/cta';
-// @import 'components/instagram';
-// @import 'components/member';
+@import 'components/instagram';
+@import 'components/member';
 @import 'components/modals';
 @import 'components/page-header';
 @import 'components/pagination';
@@ -62,11 +62,11 @@
 @import 'base/header';
 @import 'base/header/dropdowns';
 @import 'base/header/search';
-// @import 'base/header/popup-menu';
-// @import 'base/header/top-menu';
+@import 'base/header/popup-menu';
+@import 'base/header/top-menu';
 @import 'base/header/menu';
-// @import 'base/header/menu-vertical';
-// @import 'base/header/side-menu';
+@import 'base/header/menu-vertical';
+@import 'base/header/side-menu';
 @import 'base/header/mobile-menu';
 @import 'base/footer';
 @import 'demo/demo4/demo-base';
