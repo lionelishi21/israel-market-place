@@ -19,29 +19,25 @@ export const useUserStore = defineStore('useUserStore', {
                 
                 console.log('....logging user in');
                 console.log(params)
-                const { data } = await useFetch('/api/user', {
+                const { data } = await useFetch('/api/users/signin', {
                     method: 'POST',
                     body:  params
                 })
-
                 console.log( data)
-                resolve(data)
+                resolve(data)   
             })
         },
 
         async registerUser(params: any) {
 
             return new Promise ( async(resolve, reject) => {
-                
                 console.log('... registering user')
-
                 const { data } = await useFetch('/api/users/signup', {
                     method: 'POST',
                     body:  params
                 })
 
                 console.log(data)
-
                 resolve(data)
             })
         },

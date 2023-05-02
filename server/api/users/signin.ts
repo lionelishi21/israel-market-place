@@ -7,6 +7,7 @@ interface IRequestBody {
 
 export default defineEventHandler(async (event) => {
     
+    return event;
     console.log("POST /api/user/signin");
     const { email, password } = await readBody<IRequestBody>(event);
 
