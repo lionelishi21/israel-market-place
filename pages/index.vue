@@ -37,7 +37,6 @@ import FeatureSection       from '~/components/theme4/partials/home/FeatureSecti
 import NewArrivalSection    from '~/components/theme4/partials/home/NewArrivalSection.vue';
 import CategorySection      from '~~/components/theme4/partials/home/CategorySection.vue';
 import FeatureBoxSectionVue from '~~/components/theme4/partials/home/FeatureBoxSection.vue';
-
 import PromotionSectionVue  from '~/components/theme4/partials/home/PromotionSection.vue';
 
 import { useProductCategoryStore } from '~~/stores/productCategory';
